@@ -1,0 +1,7 @@
+version: 2
+models:
+  - name: country_info
+    columns:
+      - name: country
+        tests:
+          - is_nepal
