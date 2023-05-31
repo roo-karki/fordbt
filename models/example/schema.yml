@@ -1,6 +1,12 @@
 
 version: 2
-
+sources:
+    - name: legacy
+      database: NEWDATABASE 
+      schema:  ROSHAN 
+      tables:
+        - name: TABLE1
+        - name: TABLE2 
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
@@ -10,6 +16,7 @@ models:
             tests:
                 - unique
                 - not_null
+    
 
     - name: my_second_dbt_model
       description: '{{doc("table_events")}}'
@@ -29,3 +36,5 @@ models:
         description: '{{ doc("custom_model_name") }} '
       - name: age
         description:  '{{ doc("custom_model_age") }}'
+
+  
